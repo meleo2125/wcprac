@@ -18,18 +18,21 @@
     </head>
     <body>
         <div class="frame">
-            <label><input type="radio" name="color" id="red">Red</label><br>
-            <label><input type="radio" name="color" id="blue">Blue</label><br>
-            <label><input type="radio" name="color" id="green">Green</label><br>
+            <label>
+                <input type="radio" name="color" value="red" onclick="changeBackgroundColor(this.value)"> Red
+            </label><br>
+            <label>
+                <input type="radio" name="color" value="blue" onclick="changeBackgroundColor(this.value)"> Blue
+            </label><br>
+            <label>
+                <input type="radio" name="color" value="green" onclick="changeBackgroundColor(this.value)"> Green
+            </label>
         </div>
         
         <script>
-          const radios = document.querySelectorAll('input[type="radio"]');
-          radios.forEach(radio => {
-            radio.addEventListener('change', function() {
-              document.body.style.backgroundColor = this.id;
-            });
-          });
+            function changeBackgroundColor(color) {
+                document.body.style.backgroundColor = color;
+            }
         </script>
     </body>
 </html>
