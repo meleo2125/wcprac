@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radio Buttons</title>
+        <style>
+            .frame {
+                background-color: whitesmoke;
+                width: 100px;
+                padding: 10px;
+                border: 1px solid;
+                border-radius: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="frame">
+            <label><input type="radio" name="color" id="red">Red</label><br>
+            <label><input type="radio" name="color" id="blue">Blue</label><br>
+            <label><input type="radio" name="color" id="green">Green</label><br>
+        </div>
+        
+        <script>
+          const radios = document.querySelectorAll('input[type="radio"]');
+          radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+              document.body.style.backgroundColor = this.id;
+            });
+          });
+        </script>
+    </body>
+</html>
