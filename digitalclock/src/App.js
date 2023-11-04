@@ -1,3 +1,8 @@
+// Step 1: 'npm install -g create-react-app'
+// Step 2: 'npx create-react-app digitalclock'
+// Step 3: 'cd digitalclock'
+// Step 4: Paste this code in digitalclock/src/App.js
+// Step 5: Execute using 'npm start'
 import React, { useState, useEffect } from 'react';
 
 function DigitalClock() {

@@ -1,3 +1,8 @@
+// Step 1: 'npm install -g create-react-app'
+// Step 2: 'npx create-react-app welcome'
+// Step 3: 'cd welcome'
+// Step 4: Paste this code in welcome/src/App.js
+// Step 5: Execute using 'npm start'
 import React from 'react';
 
 class Welcome extends React.Component {
