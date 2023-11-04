@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Addition</title>
+        <style>
+            .frame {
+                font-family: 'Segoe UI';
+                background-color: whitesmoke;
+                width: 320px;
+                padding: 10px;
+                border: 1px solid;
+                border-radius: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            input[type="number"] {
+                width: 100px;
+                margin: 10px;
+                padding: 5px;
+                border: 1px solid;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+
+            button {
+                background-color: #00d991;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            button:hover {
+                background-color: #02b97c;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="frame">
+            <label for="num1">Enter the first number</label>
+            <input type="number" id="num1">
+            <label for="num2">Enter the second number</label>
+            <input type="number" id="num2">
+            <button onclick="calculateSum()">Sum</button>
+            <button onclick="resetFields()">Reset</button>
+        </div>
+        
+        <script>
+            function calculateSum(){
+                const num1 = parseFloat(document.getElementById('num1').value);
+                const num2 = parseFloat(document.getElementById('num2').value);
+                if(isNaN(num1) || isNaN(num2)){
+                    alert('Enter a valid number.');
+                }
+                else{
+                    const sum = num1 + num2;
+                    alert(`The sum is: ${sum}`);
+                }
+            }
+            function resetFields(){
+                document.getElementById('num1').value = "";
+                document.getElementById('num2').value = "";
+            }
+        </script>
+    </body>
+</html>
